@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: rgb(155, 0, 216);
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    user-select: none;
+}
+
+p {
+    color: white;
+    user-select: none;
+}
+
+.grid-container {
+    display: flex;
+    width: 100%;
+    height: 30rem;
+    /* margin: auto; */
+    background-color: rgb(223, 223, 223);
+}
+
+.gridbox {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.1rem;
+    width: 80%;
+    height: 70%;
+    background-color: rgb(179, 179, 179);
+    margin: auto;
+    border-radius: 0.5rem;
+}
+
+.button-box {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    height: 100%;
+    /* background-color: rgb(141, 141, 141); */
+    overflow: hidden;
+}
+
+.button-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: auto;
+    width: 90%;
+    height: 6rem;
+    border-radius: 0.5rem;
+    border: solid 0.1rem rgb(255, 255, 255);
+}
+
+
+.button-one {
+    background-color: purple;
+}
+
+.button-one:hover {
+    transition: all 0.2 ease-out;
+    background-color: rgb(179, 0, 179);
+}
+
+.button-one-alive {
+    background-color: blue;
+}
+
+.button-one-alive:hover {
+    transition: all 0.2s ease-out;
+    background-color: rgb(0, 0, 153);
+}
+
+.button-two {
+    background-color: red;
+}
+
+.button-three {
+    background-color: lightseagreen;
+}
+
+.button-four {
+    background-color: yellowgreen;
+}
+

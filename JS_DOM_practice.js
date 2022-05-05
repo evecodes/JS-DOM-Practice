@@ -6,10 +6,21 @@ buttonOne.addEventListener("click", e => {
     buttonOne.classList.toggle('button-one-alive');
 });
 
-
 // Button two actions
-// Pull up menu and able to click it away
+const buttonTwo = document.querySelector("#btn2");
+const overlayMessage = document.querySelector("#overlay-message");
+const closeButton = document.querySelector("#close-button");
 
+buttonTwo.addEventListener("click", e => {
+    overlayMessage.classList.toggle('overlay-hidden');
+    closeButton.classList.toggle('overlay-hidden');
+})
+
+// Close X button actions
+closeButton.addEventListener("click", e => {
+    closeButton.classList.toggle('overlay-hidden');
+    overlayMessage.classList.toggle('overlay-hidden');
+})
 
 // Button three actions
 const buttonThree = document.querySelector("#btn3");

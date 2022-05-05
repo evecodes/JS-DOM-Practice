@@ -39,7 +39,7 @@ p {
     gap: 0.1rem;
     width: 65%;
     height: 70%;
-    background-color: rgb(179, 179, 179);
+    /* background-color: rgb(179, 179, 179); */
     margin: auto;
     border-radius: 0.5rem;
 }
@@ -65,10 +65,46 @@ p {
     height: 6rem;
     border-radius: 0.5rem;
     border: solid 0.1rem rgb(255, 255, 255);
+    box-shadow: 0 0 1rem rgba(95, 94, 128, 0.5);
 }
 
 
 /* Buttons */
+
+/* Close X button */
+.close-button {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transform: translate(5%, 20%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.button-stripe {
+    width: 2rem;
+    height: 3px;
+    margin: 0.35rem auto;
+    background-color: white;
+    display: block;
+    z-index: 2;
+}
+
+.close-button:hover{
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.4);
+}
+
+.button-stripe:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);    
+}
+
+.button-stripe:nth-child(2){
+    visibility: hidden;   
+}
+
+.button-stripe:nth-child(3){
+    transform: translateY(-9px) rotate(-45deg);    
+}
 
 /* Button one */
 .button-one {
@@ -175,7 +211,7 @@ p {
     width: max(50%, 10rem);
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 .overlay-hidden {
@@ -184,8 +220,11 @@ p {
 
 
 /* Media queries */
-
 @media screen and (max-width: 720px) {
+    .grid-container {
+        height: 40rem;
+    }
+    
     .gridbox {
         grid-template: auto / repeat(1, 1fr);
         gap: 1rem;
@@ -195,7 +234,8 @@ p {
         width: max(80%, 10rem);
         margin-left: 50%;
         transform: translateX(-50%);
-        margin-top: 25%;
+        margin-top: 20%;
     }
 }
-/* fix height glitch */
+
+/* Fix button four after click spacing */

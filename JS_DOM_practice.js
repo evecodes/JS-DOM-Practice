@@ -52,10 +52,20 @@ function retrieveBtn() {
 }
 
 // Hidden title button actions
-const hiddenButton = document.querySelector(".hidden-button");
-const gridBox = document.querySelector(".gridbox");
+const hiddenButton = document.querySelector("#h1");
+const artCat = document.querySelector("#art-cat"); 
 
 hiddenButton.addEventListener("click", e => {
-    gridBox.style.backgroundColor = "red";
+    artCat.classList.add('art-animation');
+    hiddenButton.classList.add('no-select');
+    timeout = setTimeout(stopAnimation, 8000);
+    timeout = setTimeout(titleClickBack, 9000);
 });
-// = Placeholder button action
+
+function stopAnimation() {
+    artCat.classList.remove('art-animation');
+}
+
+function titleClickBack() {
+    hiddenButton.classList.remove('no-select');
+}

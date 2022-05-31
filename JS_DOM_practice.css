@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+main {
+    overflow: hidden;
+}
+
 h1 {
     color: rgb(155, 0, 216);
     font-family: 'Odibee Sans', cursive;
@@ -48,7 +52,7 @@ footer p {
 .grid-container {
     display: flex;
     margin-top: 3rem;
-    width: 100%;
+    /* width: 100vw; */
     height: 30rem;
     background-color: rgb(223, 223, 223);
     position: relative;

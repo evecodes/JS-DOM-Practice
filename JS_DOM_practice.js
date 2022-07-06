@@ -1,10 +1,16 @@
 // Button one actions
 const buttonOne = document.querySelector("#btn1");
+const titleTop = document.querySelector(".title");
 
 buttonOne.addEventListener("click", e => {
-    buttonOne.classList.toggle('button-one');
-    buttonOne.classList.toggle('button-one-alive');
+    document.querySelector("h1").style.color = randomColor();    
 });
+
+function randomColor() {
+    return "rgb(" + Math.floor(Math.random()*254) + "," + Math.floor(Math.random()*254)  + "," + Math.floor(Math.random()*254) + ")";
+}
+
+titleTop.style.transition = "all 0.1s ease";
 
 // Button two actions
 const buttonTwo = document.querySelector("#btn2");
@@ -23,18 +29,17 @@ closeButton.addEventListener("click", e => {
 })
 
 // Button three actions
+
 const buttonThree = document.querySelector("#btn3");
-const titleTop = document.querySelector(".title");
+const bodySepia = document.querySelector('#old-timey');
+const footerBottom = document.querySelector('footer');
 
 buttonThree.addEventListener("click", e => {
-    document.querySelector("h1").style.color = randomColor();    
+    buttonThree.classList.toggle('button-three');
+    buttonThree.classList.toggle('button-three-alive');
+    bodySepia.classList.toggle('old-timey');
+    footerBottom.classList.toggle('old-timey');
 });
-
-function randomColor() {
-    return "rgb(" + Math.floor(Math.random()*254) + "," + Math.floor(Math.random()*254)  + "," + Math.floor(Math.random()*254) + ")";
-}
-
-titleTop.style.transition = "all 0.1s ease";
 
 // Button four actions
 const buttonFour = document.querySelector("#btn4");

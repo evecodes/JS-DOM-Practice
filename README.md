@@ -13,3 +13,5 @@
  Update 04: Added the title button and art. Added an animation to it. Added a title font, added a footer. Changed some other minor things in the css.
 
  Update 05: Fixed shifting grid bug. Limited H1 movement. Added an additional font to the buttons and text. Version 1.0 ready.
+
+ Update 06: Version 1.1, with new button functions.
